@@ -14,10 +14,10 @@
         android:theme="@style/Theme.HiltSampleApp"
         tools:targetApi="31">
         <activity
-            android:name=".StartingActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StartingActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.HiltSampleApp">
