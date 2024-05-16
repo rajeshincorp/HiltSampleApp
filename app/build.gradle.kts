@@ -53,6 +53,8 @@ android {
 
 dependencies {
 
+    val fragment_version = "1.7.1"
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -75,4 +77,6 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
 }
