@@ -13,6 +13,8 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class StaringFragment : Fragment() {
 
+    val testing = "commit_testing"
+
     @Inject
     lateinit var userRepository: UserRepository
 
