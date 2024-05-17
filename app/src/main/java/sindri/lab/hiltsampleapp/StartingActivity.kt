@@ -18,7 +18,7 @@ import javax.inject.Named
 class StartingActivity : AppCompatActivity() {
 
     @Inject
-    @Named("Sql")
+    @FirebaseQualifier
     lateinit var userRepository: UserRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
