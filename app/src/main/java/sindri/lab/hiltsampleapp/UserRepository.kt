@@ -1,11 +1,25 @@
 package sindri.lab.hiltsampleapp
 
-import javax.inject.Inject
+import android.util.Log
 
 const val TAG = "UserRepo"
 
-class UserRepository @Inject constructor(val loggerService: LoggerService){
-    fun saveUser(email: String, password: String) {
-          loggerService.log("User saved in DB")
+interface UserRepository {
+    fun saveUser(email: String, password: String)
+}
+
+class SQLRepository : UserRepository {
+
+    override fun saveUser(email: String, password: String) {
+          Log.d(TAG,"User saved in SQL DB")
     }
+
+}
+
+class FirebaseRepository : UserRepository {
+
+    override fun saveUser(email: String, password: String) {
+        Log.d(TAG,"User saved in Firebase DB")
+    }
+
 }
