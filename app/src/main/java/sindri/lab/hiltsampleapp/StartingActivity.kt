@@ -12,11 +12,13 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class StartingActivity : AppCompatActivity() {
 
     @Inject
+    @Named("Sql")
     lateinit var userRepository: UserRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
