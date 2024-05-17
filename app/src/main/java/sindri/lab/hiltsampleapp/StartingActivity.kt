@@ -16,6 +16,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class StartingActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var userRepository: UserRepository
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,6 +28,8 @@ class StartingActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        userRepository.saveUser("rajesh@gmail.com","1234")
 
     }
 }
